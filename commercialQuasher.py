@@ -46,7 +46,7 @@ def commercialQuasher(networkNum):
 
 		print(pyautogui.locateOnScreen(networkLogo, confidence=0.4))
 
-		if (pyautogui.locateOnScreen(networkLogo, region=networkRegion, confidence=0.3) != None) and onCommercial:
+		if (pyautogui.locateOnScreen(networkLogo, confidence=0.3) != None) and onCommercial:
 			# the game MIGHT be on, not sure yet
 			falseNegatives += 1
 
@@ -62,7 +62,7 @@ def commercialQuasher(networkNum):
 				onCommercial = False # no longer on commercial
 				falseNegatives = 0 # reset false positives
 		
-		elif (pyautogui.locateOnScreen(networkLogo, region=networkRegion, confidence=0.3) == None) and not onCommercial:
+		elif (pyautogui.locateOnScreen(networkLogo, confidence=0.3) == None) and not onCommercial:
 
 			# the game MIGHT be in commercial, we don't know yet
 			falseNegatives += 1
