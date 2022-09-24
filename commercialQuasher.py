@@ -26,8 +26,8 @@ volDecrease = 20 # dB, level commerical volume is lowered
 
 def commercialQuasher(networkNum):
 	
-	networkLogos = ['nbc.png','cbs.png','fox.png','espn.png','nflnetwork.png','scoreboardonly.png']
-	networkRegions = [(0,0,100,100),(0,0,0,0),(1674,54,145,48),(0,0,0,0),(0,0,0,0),(0,0,0,0)]
+	networkLogos =   ['nbc.png',     'cbs.png', 'fox.png',        'espn.png', 'nflnetwork.png', 'scoreboardonly.png']
+	networkRegions = [(0,0,100,100), (0,0,0,0), (1674,54,145,48), (0,0,0,0),  (0,0,0,0),        (0,0,0,0)]
 
 	networkLogo = networkLogos[networkNum]
 	networkRegion = networkRegions[networkNum]
@@ -91,7 +91,7 @@ def commercialQuasher(networkNum):
 
 		# if keyboard.is_pressed('q') == True: # Press 'q' to quit
 		# 	print("Til next time!")
-		# 	return
+		# 	break
 
 commercialQuasher(2)
 
